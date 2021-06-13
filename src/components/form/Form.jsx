@@ -27,14 +27,14 @@ const Form = () => {
         addnewData()
     }
     return (
-        <div className="form">
-            <h1>Add todo list</h1>
+        <div className="form" id="form"> 
+            <h1>ADD TODO LIST</h1>
             <form onSubmit={handleSubmit} method="POST" > 
                 <div className="warp" >
                     <input type="text" placeholder="Title" name="title" onChange={handleChange} required="true" />
                     <input type="text" placeholder="todo" name="todo" onChange={handleChange} required="true"  />
                     <input type="text" placeholder="Info" name="info"  onChange={handleChange} required="true" />
-                    <button className="add-btn" type="submit" >Add Direction</button>
+                    <button className="add-btn" type="submit" >ADD TASK</button>
                 </div>
             </form>
         </div>

@@ -1,0 +1,12 @@
+$mainColor:#753bbd;
+$subGrnColor:#3caea3;
+$subBlueColor:#20639B;
+$subYllColor:#F6D55C;
+$subRedColor:#ED553B;
+
+$width: 812px;
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}
