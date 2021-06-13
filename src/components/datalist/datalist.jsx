@@ -8,15 +8,15 @@ function DataList() {
     const [datalist, setDataList] = useState()
 
     useEffect(() => {
-        const dataRef = firebase.database().ref('myDirection')
+        const dataRef = firebase.database().ref('todolist')
         dataRef.on('value', (snapshot) =>{
             const data = snapshot.val();
             const datalist = []
-
             for (let id in data) {
                 datalist.push({id,...data[id]})
             }
             setDataList(datalist)
+            
         });
         
         
@@ -25,7 +25,7 @@ function DataList() {
 
     return (
         <div className="_datalist">
-            <h1>Datalist</h1>
+            <h3>DATALIST</h3>
             <div className="listitem">
                 {datalist ? datalist.map((data,index) => <Data data={data} key={index} /> ):"" }
             </div>

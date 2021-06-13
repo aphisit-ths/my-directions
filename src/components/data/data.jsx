@@ -1,16 +1,22 @@
-import React from "react";
+import React,{useState,useEffect} from 'react'
 import "./data.scss";
+import firebase from '../../utils/firebase';
 function Data({ data }) {
+  
+  const removeTodo = (id) => {
+    console.log('removed :',id)
+    const myref = firebase.database().ref('todolist/' + id)
+    myref.remove()
+  }
   return (
     <div className="card">
       <section className="page-contain">
-        <a href="#" className="data-card">
-            <div  className="remove-item">x</div>
+        <a className="data-card">
           <h3>{data.title}</h3>
-          <h4>{data.direction}</h4>
+          <h4>{data.todo}</h4>
           <p>{data.info}</p>
           <span className="link-text">
-            Google map
+            <a onClick={() => removeTodo(data.id)}  className="complete task">Complete task
             <svg
               width="25"
               height="16"
@@ -25,6 +31,7 @@ function Data({ data }) {
                 fill="#753BBD"
               />
             </svg>
+            </a>
           </span>
         </a>
       </section>

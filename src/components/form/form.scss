@@ -1,10 +1,11 @@
 .form{
-    
     color:cadetblue;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     .warp{
+        
         width: 625px;
         display: flex;
         flex-direction: column;
@@ -22,7 +23,7 @@
             
         }
         .add-btn{
-            background-color: rgb(67, 185, 140);
+            background-color: #753bbd;
             color: rgb(255, 255, 255);
             border: none;
             height: 50px;
