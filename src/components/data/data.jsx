@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import "./data.scss";
 import firebase from '../../utils/firebase';
 function Data({ data }) {

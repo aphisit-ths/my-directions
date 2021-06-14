@@ -15,14 +15,16 @@
         display: flex;
         align-items: center;
         overflow: visible;
+        
         .meimg{
             width: 800px;
             height: 800px;
-            background-color:$mainColor ;
-            border-radius: 50% ;
+            background-color:white ;
+            border-radius: 10% ;
             display: flex;
             align-items: flex-end;
             justify-content: center;
+            margin: 30px;
             @include mobile{
                 width: 200px;
                 height: 200px;
@@ -63,7 +65,7 @@
                 font-size: 60px;
                 padding: 1px 0 ;
                 span{
-                    color: brown;
+                    color: $mainColor;
                     font-size: inherit;
                 }
                 @include mobile{

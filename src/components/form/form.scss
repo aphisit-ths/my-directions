@@ -1,13 +1,21 @@
+@import "../../global.scss";
 .form{
-    color:cadetblue;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
     h1{
-        color: #753bbd;
+        color: black;
         font-size: 50px;
+        span{
+            color: #753bbd;
+        }
+
+        @include mobile{
+            font-size: 20px;
+        }
     }
     .warp{
         width: 625px;
@@ -16,6 +24,12 @@
         justify-content: space-around;
         padding: 2rem 2rem 2rem 2rem ;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        span{
+            margin: 0 10rem .1rem 9rem;
+            color: rgb(192, 192, 192);
+            text-transform: uppercase;
+            font-size: 16px;
+        }
         input[type=text]{
             background-color: rgb(255, 255, 255);
             margin: .5rem 10rem .5rem 10rem;
@@ -25,11 +39,14 @@
             border-radius: 10px;
             padding-left: 2rem;
             
-        }
-        input[type=text]:focus{
-            border: white;
             
         }
+        ::placeholder {
+            color: rgb(119, 119, 119);
+            text-transform: uppercase;
+            
+          }
+        
         .add-btn{
             background-color: #753bbd;
             color: rgb(255, 255, 255);

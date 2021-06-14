@@ -25,9 +25,9 @@ function DataList() {
 
     return (
         <div className="_datalist">
-            <h3>TODO-LIST</h3>
+            <h3 className="headertext">TASK LIST</h3>
             <div className="listitem">
-                {datalist ? datalist.map((data,index) => <Data data={data} key={index} /> ):"" }
+                {datalist ? datalist.map((data,index) => <Data data={data} key={index} /> ):""}
             </div>
             
         </div>

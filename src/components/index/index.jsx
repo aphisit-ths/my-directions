@@ -10,20 +10,20 @@ export default function Intro() {
         ()=> {
             init(textRef.current, 
                 { showCursor: false, strings: 
-                    ['TODO LIST()'] })
+                    ['TodoList()'] })
         },[]
-    );
+    )
     return (
         <div className="index" id="index">
             <div className="left">
                 <div className="meimg">
-                    <img src="assets/me.png"/>
+                    <img src="assets/drawkit.png"/>
                 </div>
             </div>
             <div className="right">
                 <div className="warpper">
-                    <h2>Hello ,</h2>
-                    <h1>this is <span ref={textRef}></span></h1>
+                    <h2>Hello World,</h2>
+                    <h1>task = new  <span ref={textRef}></span></h1>
                     <a href="#form">
                         <img src="assets/down.png"/>
                     </a>
